@@ -16,11 +16,22 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '56px',
     fontSize: '20px',
   },
+  title:{
+    color: theme.palette.mainColor,
+    fontWeight: 700,
+    fontSize:36,
+    textAlign:'center',
+    marginBottom:15,
+  },
   header: {
     color: theme.palette.common.white,
     fontWeight: 700,
+    fontSize:48,
+    marginBottom:50,
+    textTransform:'uppercase',
   },
   loginField:{
+    marginBottom:15,
     '& input':{
       '&::placeholder':{
         textAlign:'center'
@@ -53,9 +64,8 @@ export const Login: FC = () => {
       <Typography component='h3' variant='h3' className={classes.header}>
         Вход
       </Typography>
-
       <FormControl>
-        <Typography component='h3' variant='h3' className={classes.header}>
+        <Typography component='h3' variant='h3' className={classes.title}>
           Введите e-mail
         </Typography>
         <TextField
@@ -65,7 +75,7 @@ export const Login: FC = () => {
           value={formik.values.email}
           onChange={formik.handleChange}
         />
-        <Typography component='h3' variant='h3' className={classes.header}>
+        <Typography component='h3' variant='h3' className={classes.title}>
           Введите пароль
         </Typography>
         <TextField
