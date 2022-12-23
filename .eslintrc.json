@@ -5,6 +5,8 @@
   },
   "extends": [
     "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:import/recommended",
     "standard-with-typescript",
     "prettier"
   ],
@@ -14,6 +16,8 @@
     "sourceType": "module",
     "project": ["./tsconfig.json"]
   },
-  "plugins": ["react"],
-  "rules": {}
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "prettier/prettier": "error"
+  }
 }
