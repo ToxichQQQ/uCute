@@ -26,24 +26,24 @@ export const theme = createTheme({
     },
   },
   overrides: {
-    MuiButton:{
-      root:{
+    MuiButton: {
+      root: {
         backgroundColor: '#A72670',
-        color:'#fff',
-        borderRadius: 56
+        color: '#fff',
+        borderRadius: 56,
       },
-      text:{
+      text: {
         paddingTop: 7,
         paddingBottom: 7,
         paddingLeft: 15,
         paddingRight: 15,
-        fontSize:20,
-        fontWeight:300,
-      }
+        fontSize: 20,
+        fontWeight: 300,
+      },
     },
-    MuiButtonBase:{
-      root:{
-        color: '#FFF'
+    MuiButtonBase: {
+      root: {
+        color: '#FFF',
       },
     },
     MuiInputBase: {

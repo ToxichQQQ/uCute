@@ -1,1 +1,5 @@
-export * from './LoginTypes'
+export type {
+  ILogin,
+  IResetPassword,
+  IRegistration,
+} from './AuthTypes'

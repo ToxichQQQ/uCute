@@ -8,7 +8,7 @@ import {
 } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { useFormik } from 'formik'
-import { ILogin } from '../../types'
+import { IRegistration } from '../../types'
 import { loginValidationSchema } from '../../schemas'
 import { useNavigate } from 'react-router-dom'
 
@@ -48,19 +48,20 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.mainColor,
     fontWeight: 200,
     fontSize: 24,
-    marginBottom: 25,
+    marginBottom: 45,
     textDecoration: 'underline',
     textAlign: 'center',
   },
 }))
 
-export const Login: FC = () => {
+export const Registration: FC = () => {
   const classes = useStyles()
   const navigate = useNavigate()
 
-  const initialValues: ILogin = {
+  const initialValues: IRegistration = {
     email: '',
     password: '',
+    password_copy: '',
   }
 
   const formik = useFormik({
@@ -69,12 +70,8 @@ export const Login: FC = () => {
     onSubmit: (values) => console.log(values),
   })
 
-  const handleGoRegistration = (): void => {
-    navigate('/registration')
-  }
-
-  const handleGoReset = (): void => {
-    navigate('/reset')
+  const handleGoToLogin = (): void => {
+    navigate('/login')
   }
 
   return (
@@ -82,9 +79,9 @@ export const Login: FC = () => {
       <Grid container justifyContent="flex-end">
         <Button
           className={classes.mainButton}
-          onClick={handleGoRegistration}
+          onClick={handleGoToLogin}
         >
-          Регистрация
+          Логин
         </Button>
       </Grid>
       <Grid
@@ -98,7 +95,7 @@ export const Login: FC = () => {
           variant="h3"
           className={classes.header}
         >
-          Вход
+          Регистрация
         </Typography>
         <FormControl>
           <Typography
@@ -123,21 +120,30 @@ export const Login: FC = () => {
             Введите пароль
           </Typography>
           <TextField
-            type="password"
             className={classes.loginField}
             placeholder="**********"
+            type="password"
             name="password"
             value={formik.values.password}
             onChange={formik.handleChange}
           />
           <Typography
-            className={classes.recoveryPassword}
-            onClick={handleGoReset}
+            component="h3"
+            variant="h3"
+            className={classes.title}
           >
-            Восстановить пароль
+            Повторите пароль
           </Typography>
+          <TextField
+            className={classes.loginField}
+            placeholder="**********"
+            type="password"
+            name="password_copy"
+            value={formik.values.password_copy}
+            onChange={formik.handleChange}
+          />
         </FormControl>
-        <Button>Войти</Button>
+        <Button>Зарегистрироваться</Button>
       </Grid>
     </div>
   )
