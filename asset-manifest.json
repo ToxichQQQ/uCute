@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/uCute/static/css/main.03880587.css",
-    "main.js": "/uCute/static/js/main.67a472f1.js",
+    "main.js": "/uCute/static/js/main.4b247744.js",
     "index.html": "/uCute/index.html",
     "main.03880587.css.map": "/uCute/static/css/main.03880587.css.map",
-    "main.67a472f1.js.map": "/uCute/static/js/main.67a472f1.js.map"
+    "main.4b247744.js.map": "/uCute/static/js/main.4b247744.js.map"
   },
   "entrypoints": [
     "static/css/main.03880587.css",
-    "static/js/main.67a472f1.js"
+    "static/js/main.4b247744.js"
   ]
 }
