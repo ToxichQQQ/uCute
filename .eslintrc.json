@@ -25,6 +25,7 @@
   },
   "plugins": ["react", "import", "prettier"],
   "rules": {
-    "prettier/prettier": "warn"
+    "prettier/prettier": "warn",
+    "@typescript-eslint/explicit-function-return-type": "off"
   }
 }
